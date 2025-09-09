@@ -1,11 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Calistoga&family=Epunda+Sans:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <title>Heriny</title>
 </head>
+
 <body>
-    
+    <header>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#Historia">Historia</a></li>
+                <li class="mobile-only"><a href="#Images">Images</a></li>
+                <li><a href="#Sistema">Sistema</a></li>
+                <li class="mobile-only"><a href="#Hardware">Hardware</a></li>
+                <li><a href="#Apresentacao">Apresentacao</a></li>
+                <li><a href="#Grupo">Grupo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-content-container">
+        <section id="Images">
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <div class="carousel-slide">
+                        <div class="image-column">
+                            <img src="./img/Frente.jpg" alt="Frente do robô">
+                            <img src="./img/lado-direto.jpg" alt="Lado direito do robô">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="image-column">
+                            <img src="./img/lado-esquerdo.jpg" alt="Lado esquerdo do robô">
+                            <img src="./img/costa.jpg" alt="Costa do robô">
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-button prev">❮</button>
+                <button class="carousel-button next">❯</button>
+            </div>
+        </section>
+
+        <section id="Historia">
+            <div class="history-content">
+                <h2>Historia</h2>
+                <p>Apresentamos o Heriny, nosso inovador robô de combate desenvolvido para o projeto Robocop. Com um
+                    design focado em agilidade e precisão, seu objetivo é claro: estourar o balão dos adversários e
+                    conquistar a vitória na arena!</p>
+                <p>O Heriny foi projetado para ser uma máquina de combate eficaz e estratégica. Uma das suas
+                    características mais distintivas são as suas duas armas de ataque, meticulosamente construídas com
+                    palitos de churrasco. Essas "lanças" foram posicionadas de forma a maximizar o alcance e a força do
+                    impacto, tornando o Heriny uma ameaça real para qualquer oponente.</p>
+                <p>Além da sua capacidade ofensiva, o Heriny é o resultado de uma cuidadosa pesquisa e desenvolvimento,
+                    combinando mecânica, eletrônica e programação para criar um competidor formidável. Estamos
+                    confiantes de que ele tem o potencial para se destacar e demonstrar nossa dedicação ao projeto.</p>
+            </div>
+        </section>
+    </div>
+
+    <section id="Sistema">
+        <div class="sistema-container">
+            <div class="arma-column">
+                <h2>Arma</h2>
+                <img src="./img/arma.jpg" alt="Robô com os palitos de churrasco">
+                <p>A arma é feita com 2 servos motores, sendo eles um deles um Micro Servo 9g SG90 com ângulo de rotação
+                    de 360 graus, e o outro Servo TowerPro MG90S com ângulo de rotação de 180 graus. Os dois possuem
+                    dois palitos de churrasco colados para conseguirem acertar no balão adversário.</p>
+            </div>
+            <div class="hardware-column">
+                <h2>Hardware</h2>
+                <div class="hardware-item">
+                    <img src="./img/shield.png" alt="O Driver Motor Shield L293D">
+                    <p>O Driver Motor Shield L293D</p>
+                </div>
+                <div class="hardware-item">
+                    <img src="./img/placa.png" alt="Placa Mega 2560 R3">
+                    <p>Placa Mega 2560 R3</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Apresentacao">
+        <h2>Apresentação</h2>
+    </section>
+    <section id="Grupo">
+    <h2>Grupo</h2>
+    <div class="group-container">
+        
+        <div class="member-card">
+            <div class="member-photo">
+                <img src="./img/melany.jpg" alt="Foto de Melany Ayala">
+            </div>
+            <div class="member-details">
+                <h3>Melany Ayala</h3>
+                <p>Estudante de Sistemas de informação - 2 Semestre</p>
+                <p>Link para contato: <a href="https://linkedin.com/in/melany-ayala-653a02301" target="_blank">linkedin.com/in/melany-ayala-653a02301</a></p>
+            </div>
+        </div>
+
+        <div class="member-card">
+            <div class="member-photo">
+                <img src="./img/Hector.jpg" alt="Foto de Hector Coelho">
+            </div>
+            <div class="member-details">
+                <h3>Hector Coelho</h3>
+                <p>Estudante de Sistemas de informação - 2 Semestre</p>
+                <p>Link para contato: <a href="https://linkedin.com/in/hector-coelho" target="_blank">linkedin.com/in/hector-coelho</a></p>
+            </div>
+        </div>
+
+        <div class="member-card">
+            <div class="member-photo">
+                <img src="./img/Eric.jpg" alt="Foto de Eric Hirano">
+            </div>
+            <div class="member-details">
+                <h3>Eric Hirano</h3>
+                <p>Estudante de Sistemas de informação - 2 Semestre</p>
+                <p>Link para contato: <a href="mailto:ericrira2@gmail.com" target="_blank">ericrira2@gmail.com</a></p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <script src="./script.js"></script>
 </body>
+<footer>
+    <p>© 2025 Heriny. All rights reserved to Heriny.</p>
+</footer>
+
 </html>
