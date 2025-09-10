@@ -6,7 +6,6 @@ body {
     font-family: Arial, sans-serif;
     font-weight: 500;
     background-color: #FFF1F6;
-    margin: 0;
 }
 
 header {
@@ -14,6 +13,12 @@ header {
     box-shadow: 0 4px 6px rgba(246, 186, 202, 0.56);
     padding: 2rem;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    will-change: transform;
+    z-index: 100;
 }
 
 nav ul {
@@ -44,7 +49,8 @@ nav ul li a:hover {
     color: lightgray;
 }
 
-.extra-mobile, .mobile-only {
+.extra-mobile,
+.mobile-only {
     display: none;
 }
 
@@ -55,9 +61,11 @@ nav ul li a:hover {
     gap: 40px;
     padding: 40px 20px;
     background-color: #fce4ec;
+    margin-top: 4rem;
 }
 
-#Images, #Historia {
+#Images,
+#Historia {
     width: 50%;
     max-width: 50%;
 }
@@ -139,7 +147,7 @@ nav ul li a:hover {
     font-size: 1.1em;
 }
 
-/* Estilos para a nova seção Sistema */
+/* Sistema */
 #Sistema {
     padding: 40px 20px;
     text-align: center;
@@ -159,7 +167,8 @@ nav ul li a:hover {
     gap: 40px;
 }
 
-.arma-column, .hardware-column {
+.arma-column,
+.hardware-column {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -195,46 +204,90 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
+/*Apresentação */
+#Apresentacao {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fce4ec;
+}
 
+#Apresentacao h2 {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.videos-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.video-box {
+    flex: 1;
+    max-width: 50%;
+    position: relative;
+    padding-bottom: 28.125%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-box iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Grupo */
 #Grupo {
     padding: 40px 20px;
-    text-align: center; 
+    text-align: center;
     background-color: #fce4ec;
 }
 
 #Grupo h2 {
     color: #333;
-    font-size: 2.5em; 
+    font-size: 2.5em;
     margin-bottom: 40px;
 }
 
 .group-container {
     display: flex;
     flex-direction: column;
-    gap: 50px; 
-    align-items: center; 
+    gap: 50px;
+    align-items: center;
 }
 
 .member-card {
-    display: flex; 
-    align-items: center; 
-    gap: 30px; 
-    background-color: #FFF1F6; 
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: #FFF1F6;
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    max-width: 800px; 
+    max-width: 800px;
     width: 100%;
-    text-align: left; 
+    text-align: left;
+}
+
+.member-photo {
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #E4869E;
 }
 
 .member-photo img {
-    width: 150px; 
-    height: 150px;
-    border-radius: 50%; 
-    object-fit: cover; 
-    border: 3px solid #E4869E; 
-    flex-shrink: 0; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .member-details h3 {
@@ -252,7 +305,7 @@ nav ul li a:hover {
 }
 
 .member-details a {
-    color: #E4869E; 
+    color: #E4869E;
     text-decoration: none;
     font-weight: 600;
 }
@@ -261,59 +314,93 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+/* footer */
+footer {
+    padding: 20px;
+    background-color: #4A202A;
+    text-align: left; 
+}
+
+ .footer-content {
+    display: flex;
+    justify-content: left; 
+    align-items: left; 
+    gap: 20px; 
+}
+.footer-content p {
+    margin: 0; 
+    color: white;
+}
+
+
+.icone-container {
+    display: flex;
+}
+
+.icone-container img {
+    width: 40px;
+    height: 40px;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.icone-container img:hover {
+    transform: scale(1.1);
+}
+
 /* Celular */
 @media (max-width: 768px) {
-    .main-content-container, .sistema-container {
+
+    .main-content-container,
+    .sistema-container,
+    .group-container {
         flex-direction: column;
         align-items: center;
         gap: 20px;
     }
 
-    .mobile-only, .extra-mobile {
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+
+    .mobile-only,
+    .extra-mobile {
         display: block;
     }
 
-    #Images, #Historia, #Sistema {
+    #Images,
+    #Historia,
+    #Sistema,
+    #Apresentacao,
+    #Grupo {
         width: 100%;
         max-width: 100%;
     }
 
-    .arma-column, .hardware-column {
+    .arma-column,
+    .hardware-column {
         width: 100%;
         max-width: 100%;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-    #Grupo h2 {
-        font-size: 2em;
-        margin-bottom: 30px;
-    }
-
-    .group-container {
-        gap: 30px; 
     }
 
     .member-card {
-        flex-direction: column; 
-        text-align: center; 
-        max-width: 90%; 
+        flex-direction: column;
+        text-align: center;
+        max-width: 90%;
         padding: 20px;
     }
 
-    .member-photo img {
-        width: 120px; 
+    .member-photo {
+        width: 120px;
         height: 120px;
-        margin-bottom: 15px; 
-    }
-
-    .member-details h3 {
-        font-size: 1.5em;
-    }
-
-    .member-details p {
-        font-size: 0.95em;
+        margin-bottom: 15px;
     }
 }
